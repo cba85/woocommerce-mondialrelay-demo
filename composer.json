@@ -14,9 +14,6 @@
   "keywords": [
     "wordpress", "woocommerce", "mondial relay"
   ],
-  "config": {
-    "preferred-install": "dist"
-  },
   "repositories": [
     {
       "type": "composer",
