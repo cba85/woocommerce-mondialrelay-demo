@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "445529706a13732a4b651fe8c3661bb2",
+    "content-hash": "5b7f9fd87ab22b92050b1ef2c8f41691",
     "packages": [
+        {
+            "name": "cba85/woocommerce-mondialrelay-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cba85/woocommerce-mondialrelay-theme.git",
+                "reference": "918d61c0002133fea74b6ee2a5e95f76e8091160"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cba85/woocommerce-mondialrelay-theme/zipball/918d61c0002133fea74b6ee2a5e95f76e8091160",
+                "reference": "918d61c0002133fea74b6ee2a5e95f76e8091160",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cba85",
+                    "email": "contact@mondialrelay-woocommerce.com",
+                    "homepage": "https://mondialrelay-woocommerce.com"
+                }
+            ],
+            "description": "The demo website theme of WooCommerce Mondial Relay plugin",
+            "homepage": "https://demo.mondialrelay-woocommerce.com",
+            "keywords": [
+                "mondial relay",
+                "plugin",
+                "theme",
+                "woocommerce",
+                "wordpress"
+            ],
+            "time": "2018-07-30 20:42:25"
+        },
         {
             "name": "composer/installers",
             "version": "v1.5.0",
@@ -499,7 +539,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cba85/woocommerce-mondialrelay-theme": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
