@@ -1,7 +1,7 @@
 {
   "name": "cba85/woocommerce-mondialrelay-demo",
   "type": "project",
-  "license": "GNU",
+  "license": "GPL-3.0-or-later",
   "description": "WooCommerce Mondial Relay demo website.",
   "homepage": "https://demo.mondialrelay-woocommerce.com",
   "authors": [
