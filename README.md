@@ -74,12 +74,24 @@ You can create an Google API Key on https://developers.google.com/maps/documenta
 
 ### Themes installed
 
-* [WooCommerce Mondial Relay](https://github.com/cba85/woocommerce-mondialrelay-theme) (a simple Storefront child)
 * [Storefront](https://woocommerce.com/storefront/)
+* WooCommerce Mondial Relay (a simple Storefront child)
 
 ### Plugins installed
 
 - [WooCommerce](https://woocommerce.com)
+
+## Configuration
+
+### Theme
+
+A child theme for Storefront is included in the project. This theme is designed to be used as a the theme for the WooCommerce Mondial Relay demo.
+
+The theme itself has no functionality.
+
+#### Google Analytics
+
+The `functions.php` contains a function to integrate Google Analytics. Change the ID if needed.
 
 ## WooCommerce configuration
 
