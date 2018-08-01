@@ -57,9 +57,11 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 ## Settings for WooCommerce Mondial Relay plugin
 
-1. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
+1. Configure your Wordpress. [Here are the steps for the demo website](#wordpress-configuration) (optional).
 
-2. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
+2. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
+
+3. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
 
     💰 This plugin is a paid plugin and it’s not included in this project.
 
@@ -69,37 +71,42 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
     When importation is done, the WooCommerce Mondial Relay plugin is now configured. [See details here](#woocommerce-mondial-relay-configuration).
 
-    📖  WooCommerce Mondial Relay plugin documentation *(in French only, sorry)* : https://docs.mondialrelay-woocommerce.com/
+    📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
 
-3. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
+4. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
 You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key
 
-## Informations
+## Wordpress configuration
 
-### Themes installed
+*Labels are in french* 🇫🇷
 
-* [Storefront](https://woocommerce.com/storefront/)
-* WooCommerce Mondial Relay (a simple Storefront child)
+### Réglages > Discussion
 
-### Plugins installed
+#### Options de discussion
 
-- [WooCommerce](https://woocommerce.com)
+- ❌ Autoriser les liens de notification d’autres blogs (pings et rétroliens) sur les nouveaux articles
+- ❌ Autoriser les lecteurs à publier des commentaires sur les nouveaux articles
 
-## WooCommerce Mondial Relay
+#### Avatars
 
-A child theme for Storefront is included in the project. This theme is designed to be used as a the theme for the WooCommerce Mondial Relay demo.
+- ❌ Afficher les avatars
 
-The theme itself has no functionality.
+### Menu
 
-#### Google Analytics
+- Accueil
+- Boutique
+- Obtenir le plugin
 
-The `functions.php` contains a function to integrate Google Analytics. Change the ID if needed.
+Afficher l’emplacement :
+
+- ✅ Menu principal
+- ✅ Menu pour mobiles
 
 ## WooCommerce configuration
 
 ### General
 
-- Units: ``g``
+- Units: g
 - Charging tax: 20%
 
 ### Payment method
@@ -110,16 +117,18 @@ The `functions.php` contains a function to integrate Google Analytics. Change th
 
 Region | Method | Name | Price
 |:--- |:---- |:---- |:----
-France | Flat rate | Mondial Relay France | 3 €
-France | Flat rate | Autre livraison France | 2 €
-Europe | Flat rate | Mondial Relay Europe | 5 €
-Europe | Flat rate | Autre livraison Europe | 4 €
+France 🇫🇷 | Flat rate | Mondial Relay | 3 €
+France 🇫🇷 | Flat rate | Other shipping | 2 €
+Europe 🇪🇺 | Flat rate | Mondial Relay | 5 €
+Europe 🇪🇺 | Flat rate | Other shipping | 4 €
 
 ### Products
 
 Product | Price | Weight
 |:--- |:---- |:----
 Test product | 10 € | 300g
+
+- Add logo for product image
 
 ## WooCommerce Mondial Relay configuration
 
@@ -138,3 +147,24 @@ Shipping method activated for Mondial Relay:
 
 - Mondial Relay France
 - Mondial Relay Europe
+
+## Informations
+
+### Themes installed
+
+* [Storefront](https://woocommerce.com/storefront/)
+* WooCommerce Mondial Relay (a simple Storefront child)
+
+### Plugins installed
+
+- [WooCommerce](https://woocommerce.com)
+
+## WooCommerce Mondial Relay theme
+
+A child theme for Storefront is included in the project. This theme is designed to be used as a the theme for the WooCommerce Mondial Relay demo.
+
+The theme itself has no functionality.
+
+#### Google Analytics
+
+The `functions.php` contains a function to integrate Google Analytics. Change the ID if needed.
