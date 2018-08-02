@@ -18,6 +18,18 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 
 Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
 
+## Index
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Wordpress configuration](#wordpress-configuration)
+- [Cron](#cron)
+- [Settings](#settings)
+  - [WooCommerce configuration](#woocommerce-configuration)
+  - [WooCommerce Mondial Relay configuration](#woocommerce-mondial-relay-configuration)
+- [Informations](#informations)
+- [WooCommerce Mondial Relay theme](#woocommerce-mondial-relay-theme)
+
 ## Requirements
 
 * PHP >= 5.6
@@ -55,27 +67,6 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 4. Access WP admin at `http://example.com/wp/wp-admin`
 
-## Settings for WooCommerce Mondial Relay plugin
-
-1. Configure your Wordpress. [Here are the steps for the demo website](#wordpress-configuration) (optional).
-
-2. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
-
-3. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
-
-    💰 This plugin is a paid plugin and it’s not included in this project.
-
-    The project includes a `woocommerce-mondialrelay.sql` file that contains pre-configured settings for the plugin.
-
-    * Import this file in your database.
-
-    When importation is done, the WooCommerce Mondial Relay plugin is now configured. [See details here](#woocommerce-mondial-relay-configuration).
-
-    📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
-
-4. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
-You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key
-
 ## Wordpress configuration
 
 *Labels are in french* 🇫🇷
@@ -108,29 +99,50 @@ Afficher l’emplacement :
 - Delete "Page d'exemple"
 - Create "Démo plugin WooCommerce Mondial Relay" *(Homepage)*
 
-### Cron
+## Cron
 
-Add the cron to empty WooCommerce order tables each month at 2am, because, well, I said I won't use user's data. And I do what I say.
+Add the cron to empty WooCommerce order tables each month at 2 am, because, well, I said I won't use user's data. And I do what I say.
 
 ```
-0 2 1 * * mysql -Nse 'show tables' DATABASE_NAME | do mysql -e "truncate table $table" DATABASE_NAME
+0 2 1 * * echo "TRUNCATE TABLE wp_woocommerce_sessions; TRUNCATE TABLE wp_woocommerce_order_itemmeta; TRUNCATE TABLE wp_woocommerce_order_items;" | mysql -u'root' -p'' -D'DATABASE_NAME'
  >/dev/null 2>&1
 ```
 
-Replace `DATABASE_NAME` by the actual database name.
+Replace `root` and `DATABASE_NAME` by the actual user and database name.
 
-## WooCommerce configuration
+## Settings
 
-### General
+1. Configure Wordpress. [Here are the steps for the demo website](#wordpress-configuration).
+
+2. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
+
+3. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
+
+    💰 This plugin is a paid plugin and it’s not included in this project.
+
+    The project includes a `woocommerce-mondialrelay.sql` file that contains pre-configured settings for the plugin.
+
+    * Import this file in your database.
+
+    When importation is done, the WooCommerce Mondial Relay plugin is now configured. [See details here](#woocommerce-mondial-relay-configuration).
+
+    📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
+
+4. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
+You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key
+
+### WooCommerce configuration
+
+#### General
 
 - Units: g
 - Charging tax: 20%
 
-### Payment method
+#### Payment method
 
 - Cash on delivery
 
-### Shipping methods
+#### Shipping methods
 
 Region | Method | Name | Price
 |:--- |:---- |:---- |:----
@@ -139,7 +151,7 @@ France 🇫🇷 | Flat rate | Other shipping | 2 €
 Europe 🇪🇺 | Flat rate | Mondial Relay | 5 €
 Europe 🇪🇺 | Flat rate | Other shipping | 4 €
 
-### Products
+#### Products
 
 Product | Price | Weight
 |:--- |:---- |:----
@@ -147,9 +159,9 @@ Test product | 10 € | 300g
 
 - Add logo for product image
 
-## WooCommerce Mondial Relay configuration
+### WooCommerce Mondial Relay configuration
 
-### Vendor
+#### Vendor
 
 - **Expéditeur** : Expediteur
 - **Rue** : 1 Rue Expediteur
@@ -158,7 +170,7 @@ Test product | 10 € | 300g
 - **Pays** : France
 - **Téléphone** : 0123456789
 
-### Settings
+#### Settings
 
 Shipping method activated for Mondial Relay:
 
