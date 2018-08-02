@@ -102,6 +102,23 @@ Afficher l’emplacement :
 - ✅ Menu principal
 - ✅ Menu pour mobiles
 
+### Pages
+
+- Delete "Politique de confidentialité"
+- Delete "Page d'exemple"
+- Create "Démo plugin WooCommerce Mondial Relay" *(Homepage)*
+
+### Cron
+
+Add the cron to empty WooCommerce order tables each month at 2am, because, well, I said I won't use user's data. And I do what I say.
+
+```
+0 2 1 * * mysql -Nse 'show tables' DATABASE_NAME | do mysql -e "truncate table $table" DATABASE_NAME
+ >/dev/null 2>&1
+```
+
+Replace `DATABASE_NAME` by the actual database name.
+
 ## WooCommerce configuration
 
 ### General
@@ -165,6 +182,8 @@ A child theme for Storefront is included in the project. This theme is designed 
 
 The theme itself has no functionality.
 
-#### Google Analytics
+### Google Analytics
 
-The `functions.php` contains a function to integrate Google Analytics. Change the ID if needed.
+~~The functions.php contains a function to integrate Google Analytics. Change the ID if needed.~~
+
+In fact, I don't really care about the traffic of this website, and I don't want to annoy the visitors with a cookie from Google. 👋 Goodbye Google Analytics.

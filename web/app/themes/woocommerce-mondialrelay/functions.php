@@ -10,18 +10,18 @@ function mondialrelay_style()
 
 // Load Google Analytics
 // /!\ Replace the ID with your own
-add_action('wp_head', 'google_analytics');
+//add_action('wp_head', 'google_analytics');
 function google_analytics()
 {
     ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61358360-4"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=ID"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-61358360-4');
+    gtag('config', 'ID');
     </script>
     <?php
 }
