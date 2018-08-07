@@ -22,9 +22,9 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Wordpress configuration](#wordpress-configuration)
-- [Cron](#cron)
 - [Settings](#settings)
+  - [Wordpress configuration](#wordpress-configuration)
+  - [Cron](#cron)
   - [WooCommerce configuration](#woocommerce-configuration)
   - [WooCommerce Mondial Relay configuration](#woocommerce-mondial-relay-configuration)
 - [Informations](#informations)
@@ -67,56 +67,19 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 4. Access WP admin at `http://example.com/wp/wp-admin`
 
-## Wordpress configuration
-
-*Labels are in french* 🇫🇷
-
-### Réglages > Discussion
-
-#### Options de discussion
-
-- ❌ Autoriser les liens de notification d’autres blogs (pings et rétroliens) sur les nouveaux articles
-- ❌ Autoriser les lecteurs à publier des commentaires sur les nouveaux articles
-
-#### Avatars
-
-- ❌ Afficher les avatars
-
-### Menu
-
-- Accueil
-- Boutique
-- Obtenir le plugin
-
-Afficher l’emplacement :
-
-- ✅ Menu principal
-- ✅ Menu pour mobiles
-
-### Pages
-
-- Delete "Politique de confidentialité"
-- Delete "Page d'exemple"
-- Create "Démo plugin WooCommerce Mondial Relay" *(Homepage)*
-
-## Cron
-
-Add the cron to empty WooCommerce order tables each month at 2 am, because, well, I said I won't use user's data. And I do what I say.
-
-```
-0 2 1 * * echo "TRUNCATE TABLE wp_woocommerce_sessions; TRUNCATE TABLE wp_woocommerce_order_itemmeta; TRUNCATE TABLE wp_woocommerce_order_items;" | mysql -u'root' -p'' -D'DATABASE_NAME'
- >/dev/null 2>&1
-```
-
-Replace `root` and `DATABASE_NAME` by the actual user and database name.
-
 ## Settings
 
 1. Configure Wordpress. [Here are the steps for the demo website](#wordpress-configuration).
 
-2. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
+    *⏩  You can skip this step if you just want to use this repository to test the WooCommerce Mondial Relay plugin.*
 
-3. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
+2. Create Cron to regulary delete user's informations. [Here is the script](#cron).
+
+    *⏩  You can skip this step if you just want to use this repository to test the WooCommerce Mondial Relay plugin.*
+
+3. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
+
+4. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
 
     💰 This plugin is a paid plugin and it’s not included in this project.
 
@@ -128,8 +91,55 @@ Replace `root` and `DATABASE_NAME` by the actual user and database name.
 
     📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
 
-4. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
+5. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
 You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key
+
+### Wordpress configuration
+
+*Labels are in french* 🇫🇷
+
+#### Réglages > Discussion
+
+##### Options de discussion
+
+- ❌ Autoriser les liens de notification d’autres blogs (pings et rétroliens) sur les nouveaux articles
+- ❌ Autoriser les lecteurs à publier des commentaires sur les nouveaux articles
+
+##### Avatars
+
+- ❌ Afficher les avatars
+
+##### Menu
+
+- Accueil
+- Boutique
+- Obtenir le plugin
+
+Afficher l’emplacement :
+
+- ✅ Menu principal
+- ✅ Menu pour mobiles
+
+#### Pages
+
+- Delete "Politique de confidentialité"
+- Delete "Page d'exemple"
+- Create "Démo plugin WooCommerce Mondial Relay" *(Homepage)*
+
+#### Favicon
+
+- Add the website favicon by uploading the `/web/app/themes/woocommerce-mondialrelay/img/logo.jpg` file.
+
+### Cron
+
+Add the cron to empty WooCommerce order tables each month at 2 am, because, well, I said I won't use user's data. And I do what I say.
+
+```
+0 2 1 * * echo "TRUNCATE TABLE wp_woocommerce_sessions; TRUNCATE TABLE wp_woocommerce_order_itemmeta; TRUNCATE TABLE wp_woocommerce_order_items;" | mysql -u'root' -p'' -D'DATABASE_NAME'
+ >/dev/null 2>&1
+```
+
+Replace `root` and `DATABASE_NAME` by the actual user and database name.
 
 ### WooCommerce configuration
 
@@ -198,4 +208,4 @@ The theme itself has no functionality.
 
 ~~The functions.php contains a function to integrate Google Analytics. Change the ID if needed.~~
 
-In fact, I don't really care about the traffic of this website, and I don't want to annoy the visitors with a cookie from Google. 👋 Goodbye Google Analytics.
+In fact, I don't really care about the traffic of this website, and I don't want to annoy the visitors with a cookie from Google. 👋   Goodbye Google Analytics.
