@@ -208,4 +208,4 @@ The theme itself has no functionality.
 
 ~~The functions.php contains a function to integrate Google Analytics. Change the ID if needed.~~
 
-In fact, I don't really care about the traffic of this website, and I don't want to annoy the visitors with a cookie from Google. 👋   Goodbye Google Analytics.
+In fact, I don't really care about the traffic of this website, I barely look at that stuff and I don't want to annoy the visitors with a cookie from Google. 👋   Goodbye Google Analytics.
