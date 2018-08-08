@@ -79,6 +79,8 @@ $ make serve
 # php -S 0.0.0.0:8080 -t web/
 ```
 
+A Procfile for Heroku and Dokku is included in the project.
+
 ## Settings
 
 1. Configure Wordpress. [Here are the steps for the demo website](#wordpress-configuration).
