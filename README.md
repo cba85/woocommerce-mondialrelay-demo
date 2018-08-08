@@ -22,6 +22,7 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Server](#server)
 - [Settings](#settings)
   - [Wordpress configuration](#wordpress-configuration)
   - [Cron](#cron)
@@ -66,6 +67,17 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 3. Set your site vhost document root to `/path/to/site/web/`
 
 4. Access WP admin at `http://example.com/wp/wp-admin`
+
+## Server
+
+This project is compatible with PHP built-in server.
+
+A Makefile command is included in the project to create a webserver and quickly use the project:
+
+```bash
+$ make serve
+# php -S 0.0.0.0:8080 -t web/
+```
 
 ## Settings
 
