@@ -99,16 +99,9 @@ A Procfile for Heroku and Dokku is included in the project.
 
     💰 This plugin is a paid plugin and it’s not included in this project.
 
-    The project includes a `woocommerce-mondialrelay.sql` file that contains pre-configured settings for the plugin.
-
-    * Import this file in your database.
-
-    When importation is done, the WooCommerce Mondial Relay plugin is now configured. [See details here](#woocommerce-mondial-relay-configuration).
+    When importation is done, you have to configure the WooCommerce Mondial Relay plugin. [See details here](#woocommerce-mondial-relay-configuration).
 
     📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
-
-5. You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
-You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key
 
 ### Wordpress configuration
 
@@ -195,9 +188,9 @@ Test product | 10 € | 300g
 
 #### Vendor
 
-- **Expéditeur** : Expediteur
-- **Rue** : 1 Rue Expediteur
-- **Code postal** : 75000
+- **Expéditeur** : Vendeur
+- **Rue** : 1 Rue du vendeur
+- **Code postal** : 75001
 - **Ville** : Paris
 - **Pays** : France
 - **Téléphone** : 0123456789
@@ -208,6 +201,12 @@ Shipping method activated for Mondial Relay:
 
 - Mondial Relay France
 - Mondial Relay Europe
+
+#### Google Maps API
+
+You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
+
+You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key.
 
 ## Informations
 
