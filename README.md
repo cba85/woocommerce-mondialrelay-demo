@@ -81,6 +81,8 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 4. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
 
+    The plugin is located in `/web/app/plugins/` after installation. You could just move the plugin files in this folder, and then activate it in Wordpress administration.
+
     💰 This plugin is a paid plugin and it’s not included in this project.
 
     The project includes a `woocommerce-mondialrelay.sql` file that contains pre-configured settings for the plugin.
