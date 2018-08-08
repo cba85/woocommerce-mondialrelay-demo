@@ -146,7 +146,13 @@ Afficher l’emplacement :
 
 ### Cron
 
-Add the cron to empty WooCommerce order tables each month at 2 am, because, well, I said I won't use user's data. And I do what I say.
+First, disable the internal WP Cron via the DISABLE_WP_CRON environment variable.
+
+```
+DISABLE_WP_CRON=true
+```
+
+Create the cron to empty WooCommerce order tables each month at 2 am, because I said I won't use user's data.
 
 ```
 0 2 1 * * echo "TRUNCATE TABLE wp_woocommerce_sessions; TRUNCATE TABLE wp_woocommerce_order_itemmeta; TRUNCATE TABLE wp_woocommerce_order_items;" | mysql -u'root' -p'' -D'DATABASE_NAME'
