@@ -216,6 +216,7 @@ Shipping method activated for Mondial Relay:
 
 ### Plugins installed
 
+- [Gutenberg](https://wordpress.org/gutenberg/)
 - [WooCommerce](https://woocommerce.com)
 
 ## WooCommerce Mondial Relay theme
