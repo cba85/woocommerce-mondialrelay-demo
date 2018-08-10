@@ -28,6 +28,7 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
   - [Cron](#cron)
   - [WooCommerce configuration](#woocommerce-configuration)
   - [WooCommerce Mondial Relay configuration](#woocommerce-mondial-relay-configuration)
+- [Deploy](#deploy)
 - [Informations](#informations)
 - [WooCommerce Mondial Relay theme](#woocommerce-mondial-relay-theme)
 
@@ -232,6 +233,15 @@ Shipping method activated for Mondial Relay:
 You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
 
 You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key.
+
+## Deploy
+
+Using Dokku, configure the Wordpress environment variables for the app without explicit url:
+
+```
+WP_HOME=
+WP_SITEURL=/wp
+```
 
 ## Informations
 
