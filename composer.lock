@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:/cba85/woocommerce-mondialrelay.git",
-                "reference": "97832c661ecd84c949879ab8ca10faf1c1a748e6"
+                "reference": "6d3ed03cf2fb65bcfb34eb8a50622018a88a8b26"
             },
             "require": {
                 "php": ">=5.6.0"
             },
-            "type": "library",
+            "type": "wordpress-plugin",
             "license": [
                 "proprietary"
             ],
@@ -34,7 +34,7 @@
                 "woocommerce",
                 "wordpress"
             ],
-            "time": "2018-08-10 13:53:27"
+            "time": "2018-08-10 16:02:11"
         },
         {
             "name": "composer/installers",

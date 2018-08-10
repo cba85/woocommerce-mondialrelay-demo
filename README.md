@@ -40,9 +40,34 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 1. Create a new project in a new folder for your project:
 
-  ```
-  composer create-project cba85/woocommerce-mondialrelay-demo your-project-folder-name
-  ```
+    ```
+    composer create-project cba85/woocommerce-mondialrelay-demo your-project-folder-name
+    ```
+
+    ⚠️ If you just want to use this repository to test the WooCommerce Mondial Relay plugin, you have to remove the private repository and dependency of the plugin in the `composer.json` file to install this project.
+
+    Because this plugin is a paid plugin and it’s not included in this project, you don't have access to it.
+
+    [You'll have to install the WooCommerce Mondial Relay plugin later, manually using FTP, or by using Wordpress plugin installer](#settings).
+
+    Remove the following states of the `composer.json` file to fix the installation errors:
+
+    ```json
+    ...
+    "repositories": [
+      ...
+      {
+        "type": "vcs",
+        "url": "git@github.com:/cba85/woocommerce-mondialrelay.git"
+      }
+    ],
+    ...
+    "require": {
+      ...
+      "cba85/woocommerce-mondialrelay": "dev-master"
+    },
+    ...
+    ```
 
 2. Update environment variables in `.env`  file:
 
