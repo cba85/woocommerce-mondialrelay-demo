@@ -4,8 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3751b07a8caf5a0a5fc8a921c6461b0",
+    "content-hash": "1936034c5aa2c5fa077231e32f61f623",
     "packages": [
+        {
+            "name": "cba85/woocommerce-mondialrelay",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:/cba85/woocommerce-mondialrelay.git",
+                "reference": "97832c661ecd84c949879ab8ca10faf1c1a748e6"
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "cba85",
+                    "email": "contact@mondialrelay-woocommerce.com"
+                }
+            ],
+            "description": "Mondial Relay plugin for WooCommerce",
+            "homepage": "https://www.mondialrelay-woocommerce.com",
+            "keywords": [
+                "mondial relay",
+                "woocommerce",
+                "wordpress"
+            ],
+            "time": "2018-08-10 13:53:27"
+        },
         {
             "name": "composer/installers",
             "version": "v1.5.0",
@@ -405,15 +435,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/3.4.0"
+                "reference": "tags/3.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.3.4.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.3.5.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -519,7 +549,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cba85/woocommerce-mondialrelay": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
