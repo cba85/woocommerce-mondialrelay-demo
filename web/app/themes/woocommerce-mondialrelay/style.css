@@ -120,6 +120,10 @@ input[type="submit"]:focus {
     outline-color: #546a79;
 }
 
+p > a {
+    text-decoration: underline;
+}
+
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget a.button, .site-header-cart .widget_shopping_cart a.button {
     background-color: #24b47e;
     border-color: #24b47e;
