@@ -4,8 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3751b07a8caf5a0a5fc8a921c6461b0",
+    "content-hash": "1936034c5aa2c5fa077231e32f61f623",
     "packages": [
+        {
+            "name": "cba85/woocommerce-mondialrelay",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:/cba85/woocommerce-mondialrelay.git",
+                "reference": "944e82f4a94421baf439302280bb931b5a32f443"
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "cba85",
+                    "email": "contact@mondialrelay-woocommerce.com"
+                }
+            ],
+            "description": "Mondial Relay plugin for WooCommerce",
+            "homepage": "https://www.mondialrelay-woocommerce.com",
+            "keywords": [
+                "mondial relay",
+                "woocommerce",
+                "wordpress"
+            ],
+            "time": "2018-11-27T11:19:47+00:00"
+        },
         {
             "name": "composer/installers",
             "version": "v1.6.0",
@@ -519,7 +549,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cba85/woocommerce-mondialrelay": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
