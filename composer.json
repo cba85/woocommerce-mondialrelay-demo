@@ -17,10 +17,6 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:/cba85/woocommerce-mondialrelay.git"
     }
   ],
   "require": {
@@ -32,8 +28,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/woocommerce": "^3.4",
     "wpackagist-theme/storefront": "^2.3",
-    "wpackagist-plugin/gutenberg": "^3.4",
-    "cba85/woocommerce-mondialrelay": "dev-master"
+    "wpackagist-plugin/gutenberg": "^3.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"

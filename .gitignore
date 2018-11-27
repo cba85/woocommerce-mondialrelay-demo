@@ -22,3 +22,6 @@ web/.htaccess
 # Composer
 vendor/*
 !vendor/.gitkeep
+
+# Mac
+.DS_Store
