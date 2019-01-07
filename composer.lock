@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1861f4839927d52eb26420299145ea90",
+    "content-hash": "ecdfe5e3140d4d481b106016baf78f83",
     "packages": [
         {
             "name": "cba85/woocommerce-mondialrelay",
@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:/cba85/woocommerce-mondialrelay.git",
-                "reference": "944e82f4a94421baf439302280bb931b5a32f443"
+                "reference": "ae2ef1c46e29e0d0fbec716ebe6fe59ff7dc049b"
             },
             "require": {
                 "php": ">=5.6.0"
@@ -34,7 +34,7 @@
                 "woocommerce",
                 "wordpress"
             ],
-            "time": "2018-11-27T11:19:47+00:00"
+            "time": "2019-01-07T10:11:28+00:00"
         },
         {
             "name": "composer/installers",
@@ -432,6 +432,26 @@
                 "environment"
             ],
             "time": "2018-10-30T17:29:25+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/classic-editor",
+            "version": "1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/classic-editor/",
+                "reference": "tags/1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/classic-editor/"
         },
         {
             "name": "wpackagist-plugin/gutenberg",
