@@ -33,6 +33,7 @@
     "wpackagist-plugin/woocommerce": "^3.5",
     "wpackagist-theme/storefront": "^2.4",
     "wpackagist-plugin/gutenberg": "^4.7",
+    "wpackagist-plugin/classic-editor":"1.3",
     "cba85/woocommerce-mondialrelay": "dev-master"
   },
   "require-dev": {
