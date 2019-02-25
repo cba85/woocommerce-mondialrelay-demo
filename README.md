@@ -131,35 +131,42 @@ A Procfile for Heroku and Dokku is included in the project.
 
 ### Wordpress configuration
 
-*Labels are in french* 🇫🇷
+#### Settings > Discussion
 
-#### Réglages > Discussion
+##### Discussion Settings
 
-##### Options de discussion
+###### Default article settings
 
-- ❌ Autoriser les liens de notification d’autres blogs (pings et rétroliens) sur les nouveaux articles
-- ❌ Autoriser les lecteurs à publier des commentaires sur les nouveaux articles
+- ❌ Allow link notifications from other blogs (pingbacks and trackbacks) on new articles
+- ❌ Allow people to post comments on new articles
 
 ##### Avatars
 
-- ❌ Afficher les avatars
+###### Avatar Display
+
+- ❌ Show Avatars
+
+#### Apparence
 
 ##### Menu
 
-- Accueil
-- Boutique
-- Obtenir le plugin
+###### Menu structure
 
-Afficher l’emplacement :
+- Home
+- Shop
+- Get the plugin
 
-- ✅ Menu principal
-- ✅ Menu pour mobiles
+###### Menu Settings
 
-#### Pages
+Display location :
 
-- Delete "Politique de confidentialité"
-- Delete "Page d'exemple"
-- Create "Démo plugin WooCommerce Mondial Relay" *(Homepage)*
+- ✅ Primary Menu
+
+### Pages
+
+- Delete "Privacy Policy"
+- Delete "Sample Page"
+- Create "WooCommerce Mondial Relay Plugin Demo" *(Set as homepage)*
 
 #### Favicon
 
@@ -257,7 +264,7 @@ WP_SITEURL=/wp
 
 ## WooCommerce Mondial Relay theme
 
-A child theme for Storefront is included in the project. This theme is designed to be used as a the theme for the WooCommerce Mondial Relay demo.
+A child theme for Storefront is included in the project. This theme is designed to be used as the theme for the WooCommerce Mondial Relay demo.
 
 The theme itself has no functionality.
 
