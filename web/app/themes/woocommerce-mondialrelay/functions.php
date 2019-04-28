@@ -5,7 +5,6 @@ add_action( 'wp_enqueue_scripts', 'mondialrelay_style' );
 function mondialrelay_style()
 {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-
 }
 
 // Load Google Analytics
@@ -25,3 +24,15 @@ function google_analytics()
     </script>
     <?php
 }
+
+// Test email with mailtrap.io
+function mailtrap($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.mailtrap.io';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = 'd8056f13b8d555';
+    $phpmailer->Password = '9fdf39c38ee0f2';
+}
+
+add_action('phpmailer_init', 'mailtrap');
