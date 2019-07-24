@@ -20,11 +20,11 @@
     },
     {
       "type": "vcs",
-      "url": "git@github.com:/cba85/woocommerce-mondialrelay.git"
+      "url": "git@github.com:cba85/woocommerce-mondialrelay.git"
     }
   ],
   "require": {
-    "php": ">=5.6",
+    "php": ">=7.1",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "^5.2",
@@ -35,7 +35,8 @@
     "wpackagist-plugin/classic-editor":"^1.5",
     "cba85/woocommerce-mondialrelay": "dev-master",
     "wpackagist-plugin/php-compatibility-checker": "^1.4",
-    "wpackagist-plugin/wp-crontrol": "^1.7"
+    "wpackagist-plugin/wp-crontrol": "^1.7",
+    "wpackagist-plugin/wordfence": "^7.3"
   },
   "extra": {
     "installer-paths": {
@@ -49,8 +50,11 @@
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
-    "test": [
-      "phpcs"
+    "serve": [
+      "php -S 0.0.0.0:8080 -t web/"
     ]
-  }
+  },
+    "config": {
+      "process-timeout": 0
+    }
 }

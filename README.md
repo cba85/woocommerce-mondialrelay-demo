@@ -34,7 +34,7 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 ## Requirements
 
-* PHP >= 5.6
+* PHP >= 7.1
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 ## Installation
@@ -42,10 +42,12 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 1. Create a new project in a new folder for your project:
 
     ```
-    composer create-project cba85/woocommerce-mondialrelay-demo your-project-folder-name
+    $ composer create-project cba85/woocommerce-mondialrelay-demo your-project-folder-name
     ```
 
-    ⚠️ If you just want to use this repository to test the WooCommerce Mondial Relay plugin, you have to remove the private repository and dependency of the plugin in the `composer.json` file to install this project.
+    ### ⚠️ Plugin test
+
+    If you just want to use this repository to test the WooCommerce Mondial Relay plugin, you have to remove the private repository and dependency of the plugin in the `composer.json` file to install this project.
 
     Because this plugin is a paid plugin and it’s not included in this project, you don't have access to it.
 
@@ -59,7 +61,7 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
       ...
       {
         "type": "vcs",
-        "url": "git@github.com:/cba85/woocommerce-mondialrelay.git"
+        "url": "git@github.com:cba85/woocommerce-mondialrelay.git"
       }
     ],
     ...
@@ -84,8 +86,8 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
       * If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command):
 
         ```
-        wp package install aaemnnosttv/wp-cli-dotenv-command
-        wp dotenv salts regenerate
+        $ wp package install aaemnnosttv/wp-cli-dotenv-command
+        $ wp dotenv salts regenerate
         ```
 
       * Or, you can cut and paste from the [Roots WordPress Salt Generator](https://roots.io/salts.html).
@@ -98,24 +100,18 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 This project is compatible with PHP built-in server.
 
-A Makefile command is included in the project to create a webserver and quickly use the project:
+A composer script command is included in the project to create a webserver and quickly use the project:
 
 ```bash
-$ make serve
+$ composer run-script serve
 # php -S 0.0.0.0:8080 -t web/
 ```
-
-A Procfile for Heroku and Dokku is included in the project.
 
 ## Settings
 
 1. Configure Wordpress. [Here are the steps for the demo website](#wordpress-configuration).
 
-    *⏩  You can skip this step if you just want to use this repository to test the WooCommerce Mondial Relay plugin.*
-
 2. Create Cron to regulary delete user's informations. [Here is the script](#cron).
-
-    *⏩  You can skip this step if you just want to use this repository to test the WooCommerce Mondial Relay plugin.*
 
 3. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
 
@@ -129,7 +125,7 @@ A Procfile for Heroku and Dokku is included in the project.
 
     📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
 
-### Wordpress configuration
+### 1. Wordpress configuration
 
 #### Settings > Discussion
 
@@ -172,7 +168,9 @@ Display location :
 
 - Add the website favicon by uploading the `/web/app/themes/woocommerce-mondialrelay/img/logo.jpg` file.
 
-### Cron
+### 2. Cron
+
+ *⏩  Skip this step if you just want to use this repository to test the WooCommerce Mondial Relay plugin.*
 
 First, disable the internal WP Cron via the DISABLE_WP_CRON environment variable.
 
@@ -189,7 +187,7 @@ Create the cron to empty WooCommerce order tables each month at 2 am, because I 
 
 Replace `root` and `DATABASE_NAME` by the actual user and database name.
 
-### WooCommerce configuration
+### 3. WooCommerce configuration
 
 #### General
 
@@ -217,7 +215,7 @@ Test product | 10 € | 300g
 
 - Add logo for product image
 
-### WooCommerce Mondial Relay configuration
+### 4. WooCommerce Mondial Relay configuration
 
 #### Vendor
 
@@ -237,18 +235,9 @@ Shipping method activated for Mondial Relay:
 
 #### Google Maps API
 
-You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to display Google Map in the widget on the checkout page.
+You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to use Google Maps to display the map in the widget on the checkout page.
 
 You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key.
-
-## Deploy
-
-Using Dokku, configure the Wordpress environment variables for the app without explicit url:
-
-```
-WP_HOME=
-WP_SITEURL=/wp
-```
 
 ## Informations
 
@@ -261,6 +250,13 @@ WP_SITEURL=/wp
 
 - [Gutenberg](https://wordpress.org/gutenberg/)
 - [WooCommerce](https://woocommerce.com)
+- [PHP Compatibility Checker](https://wordpress.org/plugins/php-compatibility-checker/)
+- [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/)
+- [Wordfence](https://wordpress.org/plugins/wordfence/)
+
+### Versions
+
+Version of plugins and themes are defined in `composer.json` file.
 
 ## WooCommerce Mondial Relay theme
 
