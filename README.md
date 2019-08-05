@@ -127,14 +127,16 @@ $ composer run-script serve
 
 ### 1. Wordpress configuration
 
-#### Settings > Discussion
+ *⏩  Skip this step if you just want to use this repository to test the WooCommerce Mondial Relay plugin.*
 
-##### Discussion Settings
+#### Settings
+
+##### Discussion
 
 ###### Default article settings
 
-- ❌ Allow link notifications from other blogs (pingbacks and trackbacks) on new articles
-- ❌ Allow people to post comments on new articles
+- ❌ Disable Allow link notifications from other blogs (pingbacks and trackbacks) on new articles
+- ❌ Disable Allow people to post comments on new articles
 
 ##### Avatars
 
@@ -158,15 +160,11 @@ Display location :
 
 - ✅ Primary Menu
 
-### Pages
+#### Pages
 
 - Delete "Privacy Policy"
 - Delete "Sample Page"
 - Create "WooCommerce Mondial Relay Plugin Demo" *(Set as homepage)*
-
-#### Favicon
-
-- Add the website favicon by uploading the `/web/app/themes/woocommerce-mondialrelay/img/logo.jpg` file.
 
 ### 2. Cron
 
@@ -202,18 +200,10 @@ Replace `root` and `DATABASE_NAME` by the actual user and database name.
 
 Region | Method | Name | Price
 |:--- |:---- |:---- |:----
-France 🇫🇷 | Flat rate | Mondial Relay | 3 €
+France 🇫🇷 | Mondial Relay | Mondial Relay | 3 €
 France 🇫🇷 | Flat rate | Other shipping | 2 €
-Europe 🇪🇺 | Flat rate | Mondial Relay | 5 €
+Europe 🇪🇺 | Mondial Relay | Mondial Relay | 5 €
 Europe 🇪🇺 | Flat rate | Other shipping | 4 €
-
-#### Products
-
-Product | Price | Weight
-|:--- |:---- |:----
-Test product | 10 € | 300g
-
-- Add logo for product image
 
 ### 4. WooCommerce Mondial Relay configuration
 
