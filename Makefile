@@ -1,0 +1,2 @@
+serve:
+	ssh -t deploy@
