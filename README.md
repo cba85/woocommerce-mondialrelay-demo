@@ -53,7 +53,11 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
     [You'll have to install the WooCommerce Mondial Relay plugin later, manually using FTP, or by using Wordpress plugin installer](#settings).
 
-    Remove the following states of the `composer.json` file to fix the installation errors:
+    #### 🚨 Admin
+
+    ##### Composer
+
+    Add the following states of the `composer.json` file to automatically install WooCommerce Mondial Relay plugin:
 
     ```json
     ...
@@ -71,6 +75,10 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
     },
     ...
     ```
+
+    ##### Git submodule
+
+    There is a git submodule in the repository for the WooCommerce Mondial Relay plugin to let contributors works on the plugin in this project.
 
 2. Update environment variables in `.env`  file:
 
