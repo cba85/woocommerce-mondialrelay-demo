@@ -39,70 +39,68 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 ## Installation
 
-1. Create a new project in a new folder for your project:
+### 1. Create a new project in a new folder for your project:
+
+```
+$ composer create-project cba85/woocommerce-mondialrelay-demo your-project-folder-name
+```
+
+#### ⚠️ Plugin test
+
+Because this plugin is a paid plugin and it’s not included in this project, you don't have access to it.
+
+[You'll have to install the WooCommerce Mondial Relay plugin later, manually using FTP, or by using Wordpress plugin installer](#settings).
+
+#### 🚨 Admin
+
+##### Composer
+
+Add the following states of the `composer.json` file to automatically install WooCommerce Mondial Relay plugin:
+
+```json
+...
+"repositories": [
+  ...
+  {
+    "type": "vcs",
+    "url": "git@github.com:cba85/woocommerce-mondialrelay.git"
+  }
+],
+...
+"require": {
+  ...
+  "cba85/woocommerce-mondialrelay": "dev-master"
+},
+...
+```
+
+##### Git submodule
+
+There is a git submodule in the repository for the WooCommerce Mondial Relay plugin to let contributors works on the plugin in this project.
+
+### 2. Update environment variables in `.env`  file:
+
+* `DB_NAME` - Database name
+* `DB_USER` - Database user
+* `DB_PASSWORD` - Database password
+* `DB_HOST` - Database host
+* `WP_ENV` - Set to environment (`development`, `staging`, `production`)
+* `WP_HOME` - Full URL to WordPress home (http://example.com)
+* `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+* `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
+
+  * If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command):
 
     ```
-    $ composer create-project cba85/woocommerce-mondialrelay-demo your-project-folder-name
+    $ wp package install aaemnnosttv/wp-cli-dotenv-command
+    $ wp dotenv salts regenerate
     ```
 
-    ### ⚠️ Plugin test
+  * Or, you can cut and paste from the [Roots WordPress Salt Generator](https://roots.io/salts.html).
 
-    If you just want to use this repository to test the WooCommerce Mondial Relay plugin, you have to remove the private repository and dependency of the plugin in the `composer.json` file to install this project.
+### 3. Set your site vhost document root to `/path/to/site/web/`
 
-    Because this plugin is a paid plugin and it’s not included in this project, you don't have access to it.
-
-    [You'll have to install the WooCommerce Mondial Relay plugin later, manually using FTP, or by using Wordpress plugin installer](#settings).
-
-    #### 🚨 Admin
-
-    ##### Composer
-
-    Add the following states of the `composer.json` file to automatically install WooCommerce Mondial Relay plugin:
-
-    ```json
-    ...
-    "repositories": [
-      ...
-      {
-        "type": "vcs",
-        "url": "git@github.com:cba85/woocommerce-mondialrelay.git"
-      }
-    ],
-    ...
-    "require": {
-      ...
-      "cba85/woocommerce-mondialrelay": "dev-master"
-    },
-    ...
-    ```
-
-    ##### Git submodule
-
-    There is a git submodule in the repository for the WooCommerce Mondial Relay plugin to let contributors works on the plugin in this project.
-
-2. Update environment variables in `.env`  file:
-
-    * `DB_NAME` - Database name
-    * `DB_USER` - Database user
-    * `DB_PASSWORD` - Database password
-    * `DB_HOST` - Database host
-    * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-    * `WP_HOME` - Full URL to WordPress home (http://example.com)
-    * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
-    * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
-
-      * If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command):
-
-        ```
-        $ wp package install aaemnnosttv/wp-cli-dotenv-command
-        $ wp dotenv salts regenerate
-        ```
-
-      * Or, you can cut and paste from the [Roots WordPress Salt Generator](https://roots.io/salts.html).
-
-3. Set your site vhost document root to `/path/to/site/web/`
-
-4. Access WP admin at `http://example.com/wp/wp-admin`
+### 4. Access WP admin at `http://example.com/wp/wp-admin`
 
 ## Server
 
@@ -117,11 +115,11 @@ $ composer run-script serve
 
 ## Settings
 
-1. Configure Wordpress. [Here are the steps for the demo website](#wordpress-configuration).
+1. Configure Wordpress.
 
-2. Create Cron to regulary delete user's informations. [Here is the script](#cron).
+2. Create Cron to regulary delete user's informations.
 
-3. WooCommerce has to be configured. [See details here](#woocommerce-configuration).
+3. WooCommerce has to be configured.
 
 4. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
 
@@ -129,9 +127,9 @@ $ composer run-script serve
 
     💰 This plugin is a paid plugin and it’s not included in this project.
 
-    When importation is done, you have to configure the WooCommerce Mondial Relay plugin. [See details here](#woocommerce-mondial-relay-configuration).
+    When importation is done, you have to configure the WooCommerce Mondial Relay plugin.
 
-    📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://docs.mondialrelay-woocommerce.com/
+    📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://www.mondialrelay-woocommerce.com/docs
 
 ### 1. Wordpress configuration
 
@@ -208,34 +206,17 @@ Replace `root` and `DATABASE_NAME` by the actual user and database name.
 
 Region | Method | Name | Price
 |:--- |:---- |:---- |:----
-France 🇫🇷 | Mondial Relay | Mondial Relay | 3 €
-France 🇫🇷 | Flat rate | Other shipping | 2 €
-Europe 🇪🇺 | Mondial Relay | Mondial Relay | 5 €
-Europe 🇪🇺 | Flat rate | Other shipping | 4 €
+France | Flat rate | Other shipping | 3 €
+Other | Flat rate | Other shipping | 7 €
 
 ### 4. WooCommerce Mondial Relay configuration
 
-#### Vendor
-
-- **Expéditeur** : Vendeur
-- **Rue** : 1 Rue du vendeur
-- **Code postal** : 75001
-- **Ville** : Paris
-- **Pays** : France
-- **Téléphone** : 0123456789
-
 #### Settings
 
-Shipping method activated for Mondial Relay:
+Create Mondial Relay shipping method for:
 
 - Mondial Relay France
 - Mondial Relay Europe
-
-#### Google Maps API
-
-You have to enter your Google Api Key on the `Settings` page of WooCommerce Mondial Relay plugin in Wordpress administration if you want to use Google Maps to display the map in the widget on the checkout page.
-
-You can create an Google API Key on https://developers.google.com/maps/documentation/javascript/get-api-key.
 
 ## Informations
 
@@ -249,7 +230,6 @@ You can create an Google API Key on https://developers.google.com/maps/documenta
 - [Gutenberg](https://wordpress.org/gutenberg/)
 - [WooCommerce](https://woocommerce.com)
 - [PHP Compatibility Checker](https://wordpress.org/plugins/php-compatibility-checker/)
-- [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/)
 - [Wordfence](https://wordpress.org/plugins/wordfence/)
 
 ### Versions
