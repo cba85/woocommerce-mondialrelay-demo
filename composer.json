@@ -26,7 +26,7 @@
     "johnpbloch/wordpress": "^5.2",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "^1.0.0",
-    "wpackagist-plugin/woocommerce": "^3.6",
+    "wpackagist-plugin/woocommerce": "^3.7",
     "wpackagist-theme/storefront": "^2.5",
     "wpackagist-plugin/classic-editor":"^1.5",
     "wpackagist-plugin/php-compatibility-checker": "^1.5",
