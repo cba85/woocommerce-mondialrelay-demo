@@ -17,6 +17,10 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:cba85/woocommerce-mondialrelay.git"
     }
   ],
   "require": {
@@ -30,7 +34,8 @@
     "wpackagist-theme/storefront": "^2.5",
     "wpackagist-plugin/classic-editor":"^1.5",
     "wpackagist-plugin/php-compatibility-checker": "^1.5",
-    "wpackagist-plugin/wordfence": "^7.3"
+    "wpackagist-plugin/wordfence": "^7.4",
+    "cba85/woocommerce-mondialrelay": "dev-master"
   },
   "extra": {
     "installer-paths": {
