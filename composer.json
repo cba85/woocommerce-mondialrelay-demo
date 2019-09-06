@@ -34,7 +34,6 @@
     "wpackagist-theme/storefront": "^2.5",
     "wpackagist-plugin/classic-editor":"^1.5",
     "wpackagist-plugin/php-compatibility-checker": "^1.5",
-    "wpackagist-plugin/wordfence": "^7.4",
     "cba85/woocommerce-mondialrelay": "dev-master"
   },
   "extra": {
