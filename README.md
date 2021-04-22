@@ -34,7 +34,7 @@ Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://r
 
 ## Requirements
 
-* PHP >= 7.1
+* PHP >= 7.4
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 ## Installation
@@ -85,8 +85,8 @@ There is a git submodule in the repository for the WooCommerce Mondial Relay plu
 * `DB_PASSWORD` - Database password
 * `DB_HOST` - Database host
 * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-* `WP_HOME` - Full URL to WordPress home (http://example.com)
-* `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+* `WP_HOME` - Full URL to WordPress home (http://127.0.0.1:8000)
+* `WP_SITEURL` - Full URL to WordPress including subdirectory (http://127.0.0.1:8000/wp)
 * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
 
   * If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command):
@@ -100,7 +100,7 @@ There is a git submodule in the repository for the WooCommerce Mondial Relay plu
 
 ### 3. Set your site vhost document root to `/path/to/site/web/`
 
-### 4. Access WP admin at `http://example.com/wp/wp-admin`
+### 4. Access WP admin at `http://127.0.0.1:8000/wp/wp-admin`
 
 ## Server
 
@@ -235,15 +235,3 @@ Create Mondial Relay shipping method for:
 ### Versions
 
 Version of plugins and themes are defined in `composer.json` file.
-
-## WooCommerce Mondial Relay theme
-
-A child theme for Storefront is included in the project. This theme is designed to be used as the theme for the WooCommerce Mondial Relay demo.
-
-The theme itself has no functionality.
-
-### Google Analytics
-
-~~The functions.php contains a function to integrate Google Analytics. Change the ID if needed.~~
-
-In fact, I don't really care about the traffic of this website, I barely look at that stuff and I don't want to annoy the visitors with a cookie from Google. 👋   Goodbye Google Analytics.
