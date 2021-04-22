@@ -48,7 +48,6 @@
     "process-timeout": 0
   },
   "minimum-stability": "dev",
-  "prefer-stable": true,
   "extra": {
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
