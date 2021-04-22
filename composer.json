@@ -33,8 +33,9 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/wordpress": "^5.7",
-    "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/wp-config": "^1.0",
+    "roots/wp-password-bcrypt": "^1.0",
+    "wpackagist-theme/storefront":"^3.5",
     "cba85/woocommerce-mondialrelay-theme": "dev-master"
   },
   "require-dev": {
