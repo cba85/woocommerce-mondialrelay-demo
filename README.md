@@ -47,36 +47,9 @@ $ composer create-project cba85/woocommerce-mondialrelay-demo your-project-folde
 
 #### ⚠️ Plugin test
 
-Because this plugin is a paid plugin and it’s not included in this project, you don't have access to it.
+> Because this plugin is a paid plugin and it’s not included in this project, you don't have access to it.
 
 [You'll have to install the WooCommerce Mondial Relay plugin later, manually using FTP, or by using Wordpress plugin installer](#settings).
-
-#### 🚨 Admin
-
-##### Composer
-
-Add the following states of the `composer.json` file to automatically install WooCommerce Mondial Relay plugin:
-
-```json
-...
-"repositories": [
-  ...
-  {
-    "type": "vcs",
-    "url": "git@github.com:cba85/woocommerce-mondialrelay.git"
-  }
-],
-...
-"require": {
-  ...
-  "cba85/woocommerce-mondialrelay": "dev-master"
-},
-...
-```
-
-##### Git submodule
-
-There is a git submodule in the repository for the WooCommerce Mondial Relay plugin to let contributors works on the plugin in this project.
 
 ### 2. Update environment variables in `.env`  file:
 
@@ -89,14 +62,14 @@ There is a git submodule in the repository for the WooCommerce Mondial Relay plu
 * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://127.0.0.1:8000/wp)
 * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
 
-  * If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command):
+If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command):
 
-    ```
-    $ wp package install aaemnnosttv/wp-cli-dotenv-command
-    $ wp dotenv salts regenerate
-    ```
+```
+$ wp package install aaemnnosttv/wp-cli-dotenv-command
+$ wp dotenv salts regenerate
+```
 
-  * Or, you can cut and paste from the [Roots WordPress Salt Generator](https://roots.io/salts.html).
+Or, you can cut and paste from the [Roots WordPress Salt Generator](https://roots.io/salts.html).
 
 ### 3. Set your site vhost document root to `/path/to/site/web/`
 
@@ -110,25 +83,23 @@ A composer script command is included in the project to create a webserver and q
 
 ```bash
 $ composer run-script serve
-# php -S 0.0.0.0:8080 -t web/
+```
+
+Or
+
+```bash
+$ php -S 0.0.0.0:8080 -t web/
 ```
 
 ## Settings
 
 1. Configure Wordpress.
-
 2. Create Cron to regulary delete user's informations.
-
 3. WooCommerce has to be configured.
-
 4. Install [WooCommerce Mondial Relay plugin](https://www.mondialrelay-woocommerce.com/).
-
     The plugin is located in `/web/app/plugins/` after installation. You could just move the plugin files in this folder, and then activate it in Wordpress administration.
-
     💰 This plugin is a paid plugin and it’s not included in this project.
-
     When importation is done, you have to configure the WooCommerce Mondial Relay plugin.
-
     📖  WooCommerce Mondial Relay plugin documentation *(in French only 🇫🇷 )* : https://www.mondialrelay-woocommerce.com/docs
 
 ### 1. Wordpress configuration
@@ -223,13 +194,11 @@ Create Mondial Relay shipping method for:
 ### Themes installed
 
 * [Storefront](https://woocommerce.com/storefront/)
-* WooCommerce Mondial Relay (a simple Storefront child)
+* [WooCommerce Mondial Relay](https://github.com/cba85/woocommerce-mondialrelay-theme) (a simple Storefront child)
 
 ### Plugins installed
 
-- [Gutenberg](https://wordpress.org/gutenberg/)
 - [WooCommerce](https://woocommerce.com)
-- [PHP Compatibility Checker](https://wordpress.org/plugins/php-compatibility-checker/)
 - [Wordfence](https://wordpress.org/plugins/wordfence/)
 
 ### Versions
