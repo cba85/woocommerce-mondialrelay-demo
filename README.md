@@ -199,7 +199,6 @@ Create Mondial Relay shipping method for:
 ### Plugins installed
 
 - [WooCommerce](https://woocommerce.com)
-- [Wordfence](https://wordpress.org/plugins/wordfence/)
 
 ### Versions
 
