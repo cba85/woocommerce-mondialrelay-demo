@@ -20,6 +20,10 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:cba85/woocommerce-mondialrelay-theme.git"
     }
   ],
   "require": {
