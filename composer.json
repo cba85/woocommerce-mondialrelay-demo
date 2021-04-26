@@ -37,7 +37,7 @@
     "roots/wp-password-bcrypt": "^1.0",
     "wpackagist-theme/storefront":"^3.5",
     "cba85/woocommerce-mondialrelay-theme": "dev-master",
-    "wpackagist-plugin/woocommerce": "5.2"
+    "wpackagist-plugin/woocommerce": "5.2.*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
